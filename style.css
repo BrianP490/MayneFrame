@@ -1,0 +1,247 @@
+/*whole page formatting*/
+.Outline {
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+    background-color: #708090;
+    visibility: visible;    /*make visible*/
+    padding-bottom: 75px; /*adds space between bottom of page and footer*/
+    /* margin-top: 0px; */
+}
+
+/*header*/
+.Top5 {
+    display: flex-inline;
+    text-align: right;
+}
+.UnorderedList {
+    margin: 0px;
+}
+.Top5 .UnorderedList li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    padding-right: 2em;
+}
+.Top5 .UnorderedList li a{
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/*Body Content*/
+
+.inside-Outline {
+    min-height: 100vh; /*makes footer stay at the bottom of page*/
+    font-size: 14px;    /*set text font size*/
+    background-color: #4F5D75;
+    color: #f1f1f1; /*set text color for inside elements*/
+}
+
+/*page Title*/
+.Description {
+    text-align: center;
+    background-color: rgb(252, 114, 0);
+    padding: 20px;
+    margin: 10px 10px 10px 10px;
+    align-content: center;
+    border-radius: 15px;    /*rounded corners*/
+}
+
+/*biography text*/
+.Bio {
+    padding: 2%;
+}
+/*header for bio*/
+h3 {
+    margin-top: 0;
+    font-size: 14px; 
+    color: #050505;  
+    text-decoration: underline; 
+}
+/*header for bio*/   
+h4 {
+    font-size: 18px;
+    color: #050505; 
+    text-decoration: underline; 
+}
+/*profile pic section*/
+.Headshot {
+    float: right;
+    width: 33%;
+    padding: 20px;
+    border-top: 4px solid #f1f1f1;
+    border-left: 4px solid #f1f1f1;
+    margin:20px;
+}
+
+/*profile pic*/
+#Picture {
+    width: 100%;/*fit content within frame*/
+    clear: right;
+    box-shadow: #f1f1f1 0 0 10px;
+}
+
+/*Goals Section*/
+.Goals {
+    padding: 2%;
+    margin: 0 0 0px 0;
+    justify-content: center;
+}
+.QTitle {
+    color: #050505; 
+    text-decoration: underline;
+}
+.Goals .Block {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Block .blockGoal {
+    height: 130px;
+    max-width: 50%;
+}
+
+
+/* Adjustments */
+
+/*small mobile screens*/
+@media (max-width: 399px) {
+    .Goals {
+        /* background-color: blue; */
+        margin-bottom: 200px;
+    }
+}
+/*second smallest screen*/
+@media (min-width:399px) and (max-width: 434px) {
+    .Goals {
+        /* background-color: rgb(0, 255, 34); */
+        margin-bottom: 50px;
+    }
+    .inside-Outline {
+        font-size: 14px;
+    }
+    h3 {
+        font-size: 20px;
+    } 
+    h4 {
+        font-size: 18px;
+    }
+}
+/*tablets*/
+@media (min-width:434px) and (max-width: 730px){
+    .Goals {
+        /* background-color: rgb(255, 0, 221); */
+        margin-bottom: 70px;
+    }
+    .inside-Outline {
+        font-size: 18px;
+    }
+    h3 {
+        font-size: 22px;
+    }
+    h4 {
+        font-size: 20px;
+    }
+}
+/*moniters and up*/
+@media (min-width: 730px) {
+    .Goals {
+        margin-bottom: 0px;
+    }
+    .inside-Outline {
+        font-size: 18px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    h4 {
+        font-size: 22px;
+    }
+}
+
+/* Favorites Section */
+.Favorites {
+    clear: both;
+    padding: 2%;
+    height: 140px;
+    
+}
+
+.Container {
+    width: 400px;
+    height: 30px;
+    justify-content: center;
+    align-content: center;
+}
+
+.Container .Content { 
+    padding-left: 5%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.listItem { /*list entry style*/
+    height: 30px;
+    width: 50%;
+    list-style-type: circle;
+}
+
+@media (max-width: 399px) {
+    .Container {
+        width: 80vw;
+    }
+    .listItem{
+        list-style-type: none;
+    }
+}
+
+/* Quotes Section */
+.Quotes {
+    padding: 2%;
+    background-color: #A4BAC6;
+}
+
+.blockQuote {
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-bottom: 1px solid black;
+    background-color: #EF8354;
+}
+
+/* Footer Section */
+.Footer {
+    background-color: #708090;
+    border-top: 1px solid black;
+    text-align: center;
+    min-height: 1em;
+    bottom: 0;
+    left: 0px;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    padding: -100px;
+}
+
+.bulletPoint {
+    font-size: 12px;
+    display: inline; /*have bulletpoints on the same line*/
+    padding-right: 10px; /*have _px spacing on the right of each bullet point*/ 
+}
+
+/*Link attributes/styles*/
+a{
+    color: black;
+}
+
+a:link {
+    text-decoration: none; /*remove underline on links*/
+}
+    
+a:hover {
+    color: #160e88; /*change effects when user hovers over link*/
+    text-decoration: underline #160e88;
+}
+
