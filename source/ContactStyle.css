@@ -1,0 +1,276 @@
+/* color scheme variables */
+:root {
+    --Page-Outline-color: #708090;
+    --White: rgb(255, 255, 255);
+    --Black: rgb(0, 0, 0);
+    --Styled-Black-color: #050505;
+    --Body-color: #4F5D75;
+    --Headshot-Border-color: #f1f1f1;
+    --Abstract-color: rgb(54,69,79);
+    --Hover-color: rgb(255, 255, 255);
+    --Quotes-Body-color: #4F5D75;
+}
+
+/*whole page formatting*/
+.Outline {
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    background-color: var(--Page-Outline-color);
+    visibility: visible;    /*make visible*/
+}
+/*header*/
+.Top5 {
+    background-color: var(--Page-Outline-color);
+    position: fixed;
+    width:100%;
+    top: 0px;
+    left:0px;/*expand all the way to the left*/
+    border-bottom: 1px solid var(--Black);
+
+}
+.OriginalHeader{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+#NavIco{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left:2%;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+    margin-right: 15%;
+    text-decoration: underline;
+    cursor: default;
+}
+.UnorderedList {
+    margin: 0px 0px 3px 0px;/*3px on bottom of header*/
+    text-align: right; /*allign items to the right*/
+    /* margin-right: 3vw; */
+    Padding-left: 0px;
+}
+
+.LinQ{
+    width:100%;
+}
+.Top5 .UnorderedList li {
+    background-color: rgba(54, 69, 79, 0.445);
+    list-style: none;
+    display: inline-block;
+    padding: 3px;
+    border-radius: 5px;
+    margin-right: 2%;
+}
+
+.Top5 .UnorderedList li a{
+    color: var(--Black); /*link text color*/
+    text-decoration: none;
+    font-size: 16px;
+}
+/*hover effects*/
+
+.Top5 .UnorderedList li a:hover {
+    color: var(--Hover-color); /*change text effects when user hovers over link*/
+    transition: 1s;
+    text-decoration: underline var(--Hover-color);
+    /* OR text-decoration: none; FOR no underline decor */
+    transition: .5s;
+}
+
+.Top5 .UnorderedList li:hover {
+    background-color: var(--Abstract-color);/*change the color of the background of the header link*/
+    transition: 1s;
+}
+
+
+/* Mobile Hamburger Menu*/
+.MobileHeader{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+.nav-branding{
+    font-size: 2rem;
+    color: var(--Black);
+    text-decoration: none;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+/*Hamburger Lines*/
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    background-color: var(--Styled-Black-color);
+}
+
+/*Body Content*/
+
+.inside-Outline {
+    /*min-height: 100vh; makes footer stay at the bottom of page */
+    margin-top: 55px;
+    padding-top: 5px; /*spacing from top of body to Description header*/
+    font-size: 16px;    /*set text font size*/
+    line-height: 1.5;
+    color: var(--Headshot-Border-color); /*set text color for inside elements*/
+    background-color: var(--Page-Outline-color);
+    border: 3px solid rgb(0, 0, 0);
+}
+
+/*page Title*/
+
+.DescDiv{
+    display: flex;
+}
+.Description {
+    background-color: var(--Abstract-color);
+    padding: 6px;
+    color: var(--Styled-Black-color);
+    text-align: center;
+    margin: auto;
+    /*margin: 0px 10px 10px 10px;*//* top right bottom left*/
+    border-radius: 15px;    /*rounded corners*/
+    border: 2px solid rgb(0, 0, 0);
+}
+
+
+/*Project Outline*/
+
+.Project {
+    padding: 0px;
+    background-color: var(--Page-Outline-color);
+}
+
+.Title{
+    display: flex;
+}
+
+.Title h1{
+    color: var(--Black);
+    margin: 0 0 0 10%;/* top right bottom left*/
+    text-decoration: underline;
+}
+
+.Flex-Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+}
+
+.Project-Description{
+    width: auto;
+    background-color: var(--Abstract-color);
+    padding: 6px;
+    color: var(--Headshot-Border-color);
+    text-align: center;
+    /*margin: 0px 10px 10px 10px;*//* top right bottom left*/
+    border-radius: 15px;    /*rounded corners*/
+    border: 2px solid rgb(0, 0, 0);
+}
+.Project-Description Text{
+    color: var(--Headshot-Border-color)
+}
+
+.Text a{
+    color: var(--Headshot-Border-color);
+    text-decoration: none;
+}
+.Project a:hover{
+    text-decoration: underline;
+    transition: .5s;
+}
+/*linebreak styling*/
+.LineBreak{
+    width:99%;
+    border: .1px solid white;
+}
+/* Responsive Adjustments */
+@media (min-width:1px){
+    .inside-Outline {
+        margin-top: 87px;
+        }
+}
+/*show nav bar menu for mobile users*/
+@media (max-width: 470px) {
+    .OriginalHeader { /*Hide the original Header Links*/
+        visibility: hidden;
+        height: 0;
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+    /*menu pop0up animation*/
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    /*Display the Menu Options*/
+    .NavMenu{
+        display: flex;
+        position: fixed;
+        Left: -1000%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: var(--Page-Outline-color);
+        width: 100%;
+        text-align: center;
+        transition: .4s;
+    }
+    .hLink{
+        margin: 1rem;
+    }
+    .Top5 .UnorderedList li {
+        background-color: rgba(54, 69, 79, 0);
+    }
+    .Top5 .UnorderedList li a{
+        font-size: 1.5rem;
+        font-weight:bolder ;
+    }
+    /*Menu Border Styling*/
+    .NavMenu.active{
+        left: 0;
+        border-top: 3px solid var(--Quotes-Body-color);
+        border-bottom: 3px solid black;
+    }
+}
+@media (min-width: 470px) {
+    .MobileHeader { /*Hide the Mibile Header Links and hamburger menu*/
+        visibility: hidden;
+        height: 0;
+    }
+    .inside-Outline {
+        margin-top: 56px;
+        }
+}
+@media (min-width: 640px) {
+    .inside-Outline {
+        margin-top: 42px;
+        }
+}
+
+/*add a bottom margin to the last section*/
+#LastProject{
+    margin-bottom: 2%;
+}
+
+/* Footer Section */
+.Footer {
+    display: none;
+}

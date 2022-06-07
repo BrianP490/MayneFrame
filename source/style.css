@@ -1,0 +1,321 @@
+/* color scheme variables */
+:root {
+    --Page-Outline-color: #708090;
+    --White: rgb(255, 255, 255);
+    --Black: rgb(0, 0, 0);
+    --Styled-Black-color: #050505;
+    --Body-color: #4F5D75;
+    --Headshot-Border-color: #f1f1f1;
+    --Abstract-color: rgb(54,69,79);
+    --Hover-color: rgb(255, 255, 255);
+    --Quotes-Body-color: #4F5D75;
+}
+
+/*whole page formatting*/
+.Outline {
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    background-color: var(--Page-Outline-color);
+    visibility: visible;    /*make visible*/
+    padding-bottom: 35px; /*adds space between bottom of page and footer*/
+    margin-top: 2px;
+}
+
+/*header*/
+.Top5 {
+    display: flex-inline;
+    text-align: right;
+    top:0;
+}
+.UnorderedList {
+    margin: 0px 0px 3px 0px;/*5px on bottom of header*/
+}
+.Top5 .UnorderedList li {
+    background-color: rgba(54, 69, 79, 0.445);
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    padding: 3px;
+    border-radius: 5px;
+}
+.Top5 .UnorderedList li a{
+    color: var(--Styled-Black-color);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.Top5 .UnorderedList li a:hover {
+    color: var(--Hover-color); /*change text color effects when user hovers over link*/
+    text-decoration: underline var(--Hover-color);
+    /* OR text-decoration: none; FOR no underline decor */
+
+}
+
+/*Body Content*/
+
+.inside-Outline {
+    /*min-height: 100vh; makes footer stay at the bottom of page */
+    padding-top: 10px; /*spacing from top of body to Description header*/
+    font-size: 16px;    /*set text font size*/
+    line-height: 1.5;
+    color: var(--Headshot-Border-color); /*set text color for inside elements*/
+    background-color: var(--Body-color);
+    border: 3px solid rgb(0, 0, 0);
+}
+
+/*page Title*/
+
+.DescDiv{
+    display: flex;
+}
+.Description {
+    background-color: var(--Abstract-color);
+    padding: 6px;
+    color: var(--Styled-Black-color);
+    text-align: center;
+    margin: auto;
+    /*margin: 0px 10px 10px 10px;*//* top right bottom left*/
+    border-radius: 15px;    /*rounded corners*/
+    border: 3px solid rgb(0, 0, 0);
+}
+
+/*biography text*/
+.Bio {
+    padding: 2%;/*padding for body*/
+}
+/*header for bio*/
+h3 {
+    margin-top: 0;
+    font-size: 14px; /*set text font size*/
+    color: var(--Styled-Black-color);  
+    text-decoration: underline; 
+}
+/*header for bio*/   
+h4 {
+    font-size: 18px; /*set text font size*/
+    color: var(--Styled-Black-color); 
+    text-decoration: underline; 
+}
+/*profile pic section*/
+.Headshot {
+    float: right; /*set picture to the right*/
+    width: 33%;
+    padding: 20px;
+    border-top: 4px solid var(--Headshot-Border-color);
+    border-left: 4px solid var(--Headshot-Border-color);
+    margin:20px;
+}
+
+/*profile pic*/
+#Picture {
+    width: 100%;/*fit content within frame*/
+    clear: right;
+    box-shadow: var(--Headshot-Border-color) 0 0 10px;
+}
+
+/*Goals Section*/
+.Goals {
+    padding: 2% 2% 2% 2%;/* top right bottom left*/
+    margin: 0px;
+    justify-content: center;
+}
+.QTitle {
+    color: var(--Styled-Black-color); 
+    text-decoration: underline;
+}
+
+.Goals .Block {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Block .blockGoal {
+    height: 130px;
+    max-width: 50%;
+}
+
+
+/* Responsive Adjustments */
+
+/*small mobile screens*/
+@media (max-width: 399px) {
+    .Goals {
+        margin-bottom: 200px;/*to accomodate for smallest screen sizes*/
+    }
+    .Outline {/*padding for footer height*/
+        padding-bottom: 70px;
+    }
+    
+}
+/*second smallest screen*/
+@media (min-width:399px) and (max-width: 434px) {
+    .Goals {
+        /* background-color: rgb(0, 255, 34); */
+        margin-bottom: 110px;
+    }
+    .inside-Outline {
+        font-size: 19px;
+    }
+    h3 {
+        font-size: 20px;
+    } 
+    h4 {
+        font-size: 18px;
+    }
+    .Outline {/*padding for footer height*/
+        padding-bottom: 55px;
+    }
+    
+}
+/*tablets*/
+@media (min-width:434px) and (max-width: 730px){
+    .Goals {
+        /* background-color: rgb(255, 0, 221); */
+        margin-bottom: 90px;
+    }
+    .inside-Outline {
+        font-size: 18px;
+    }
+    h3 {
+        font-size: 22px;
+    }
+    h4 {
+        font-size: 20px;
+    }
+    .Outline {/*padding for footer height*/
+        padding-bottom: 45px;
+    }
+}
+/*moniters and up*/
+@media (min-width: 730px) {
+    .Goals {
+        margin-bottom: 0px;
+    }
+    .inside-Outline {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    h4 {
+        font-size: 22px;
+    }
+}
+
+/* Favorites Section */
+.Favorites {
+    clear: both;
+    padding: 2%;
+    height: 140px;
+}
+
+.FavoritesContainer {
+    width: 400px;
+    height: 30px;
+    justify-content: center;
+    align-content: center;
+}
+
+.FavoritesContainer .Content { 
+    padding-left: 5%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.listItem { /*list entry style*/
+    height: 30px;
+    width: 50%;
+    list-style-type: none;/* remove list styling*/
+}
+
+@media (max-width: 399px) {
+    .FavoritesContainer {
+        width: 80vw;
+    }
+    .listItem{
+        list-style-type: none;
+    }
+}
+
+/* Quotes Section */
+.Quotes {
+    padding: 2%;
+    background-color: var(--Quotes-Body-color);
+}
+
+.blockQuote {
+    border-top: 1px solid var(--Black);
+    border-left: 1px solid var(--Black);
+    border-right: 3px solid var(--Black);
+    border-bottom: 3px solid var(--Black);
+    background-color: var(--Abstract-color);
+    border-radius: 15px;    /*rounded corners*/
+    text-align: center; /*center quotes within blockQuote*/
+    margin-bottom: 5px;
+}
+/* specify quote link text color */
+.blockQuote a {
+    color: var(--Headshot-Border-color);
+}
+.inLine{
+    padding: 0px 10px;/* top-bottom, left-right padding*/
+}
+/*Link attributes/styles*/
+a{
+    color: var(--Black);
+}
+
+a:link {
+    text-decoration: none; /*remove underline on links*/
+}
+    
+a:hover {
+    color: var(--Hover-color); /*change effects when user hovers over link*/
+    text-decoration: underline var(--Hover-color);
+}
+
+/* Footer Section */
+.Footer {
+    background-color: var(--Page-Outline-color);
+    border-top: 1px solid var(--Black);
+    text-align: center;
+    min-height: 1em;
+    bottom: 0;
+    left: 0px;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    /* padding: -100px; */
+}
+.bullets{
+    margin: 10px 1px 10px auto;
+}
+
+/*Footer Links*/
+.bulletPoint { 
+    font-size: 14px;
+    display: inline; /*have bulletpoints on the same line*/
+    padding-right: 10px; /*have _px spacing on the right of each bullet point*/ 
+}
+
+/*Link attributes/styles*/
+.bulletPoint a{
+    background-color: rgba(54, 69, 79, 0.445);
+    padding: 3px;
+    border-radius: 5px;
+    color: var(--Black);
+}
+
+.bulletPoint a:link {
+    text-decoration: none; /*remove underline on links*/
+}
+    
+.bulletPoint a:hover {
+    background-color: rgb(54, 69, 79);
+    color: var(--Hover-color); /*change effects when user hovers over link*/
+    text-decoration: underline var(--Hover-color);
+    transition: .5s;
+}

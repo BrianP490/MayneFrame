@@ -1,0 +1,24 @@
+Hostinger - Domain Host Server
+$ .99 / year
+$49.17/yr
+host name: mayneframe.tech
+
+login: briantech9 gmail account
+-------------------------------------
+
+
+name of domain is linked to web server and its files
+
+nameservers to link domain to webhost.com:
+ns01.000webhost.com
+ns02.000webhost.com
+
+
+-------------------------------------
+000webhost.com - website host server
+(stores files for personal site)
+
+to modify files go to 000webhost.com => google sign-in => manage website => upload files
+
+
+

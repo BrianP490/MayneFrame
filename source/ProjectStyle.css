@@ -1,0 +1,287 @@
+/* color scheme variables */
+:root {
+    --Page-Outline-color: #708090;
+    --White: rgb(255, 255, 255);
+    --Black: rgb(0, 0, 0);
+    --Styled-Black-color: #050505;
+    --Body-color: #4F5D75;
+    --Headshot-Border-color: #f1f1f1;
+    --Abstract-color: rgb(54,69,79);
+    --Hover-color: rgb(255, 255, 255);
+    --Quotes-Body-color: #4F5D75;
+}
+
+/*whole page formatting*/
+.Outline {
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    background-color: var(--Page-Outline-color);
+    visibility: visible;    /*make visible*/
+}
+/*header*/
+.Top5 {
+    background-color: var(--Page-Outline-color);
+    position: fixed;
+    width:100%;
+    top: 0px;
+    left:0px;/*expand all the way to the left*/
+    border-bottom: 1px solid var(--Black);
+
+}
+.UnorderedList {
+    margin: 0px 0px 3px 0px;/*3px on bottom of header*/
+    text-align: right; /*allign items to the right*/
+    margin-right: 3vw;
+}
+
+.Top5 .UnorderedList li {
+    background-color: rgba(54, 69, 79, 0.445);
+    list-style: none;
+    display: inline-block;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.Top5 .UnorderedList li a{
+    color: var(--Black); /*link text color*/
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/*hover effects*/
+
+.Top5 .UnorderedList li a:hover {
+    color: var(--Hover-color); /*change text effects when user hovers over link*/
+    transition: 1s;
+    text-decoration: underline var(--Hover-color);
+    /* OR text-decoration: none; FOR no underline decor */
+    transition: .5s;
+}
+
+.Top5 .UnorderedList li:hover {
+    background-color: var(--Abstract-color);/*change the color of the background of the header link*/
+    transition: 1s;
+}
+/*Body Content*/
+
+.inside-Outline {
+    /*min-height: 100vh; makes footer stay at the bottom of page */
+    margin-top: 55px;
+    padding-top: 5px; /*spacing from top of body to Description header*/
+    font-size: 16px;    /*set text font size*/
+    line-height: 1.5;
+    color: var(--Headshot-Border-color); /*set text color for inside elements*/
+    background-color: var(--Page-Outline-color);
+    border: 3px solid rgb(0, 0, 0);
+}
+
+/*page Title*/
+
+.DescDiv{
+    display: flex;
+}
+.Description {
+    background-color: var(--Abstract-color);
+    padding: 6px;
+    color: var(--Styled-Black-color);
+    text-align: center;
+    margin: auto;
+    /*margin: 0px 10px 10px 10px;*//* top right bottom left*/
+    border-radius: 15px;    /*rounded corners*/
+    border: 2px solid rgb(0, 0, 0);
+}
+
+
+/*Project Outline*/
+
+.Project {
+    padding: 0px;
+    background-color: var(--Page-Outline-color);
+}
+
+.Title{
+    display: flex;
+}
+
+.Title h1{
+    color: var(--Black);
+    margin-left: 2%;
+    margin-left: 10%;
+    text-decoration: underline;
+}
+
+.Flex-Container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: center;
+}
+.ProjectImage{
+    width: 504px;
+    height: 504px;
+    /* width: 50%; */
+    text-align: center;
+    visibility: show;
+    margin: 0px 15px;
+}
+
+#Screenshot{
+    box-shadow: var(--Headshot-Border-color) 0 0 5px;
+}
+.Project-Description{
+    width: auto;
+    max-height: 90%;
+    background-color: var(--Abstract-color);
+    padding: 6px;
+    color: var(--Headshot-Border-color);
+    text-align: center;
+    
+    margin: auto;
+    margin-right: 15px;
+    /*margin: 0px 10px 10px 10px;*//* top right bottom left*/
+    border-radius: 15px;    /*rounded corners*/
+    border: 2px solid rgb(0, 0, 0);
+}
+.Project-Description Text{
+    color: var(--Headshot-Border-color)
+}
+
+.ProjectLink a{
+    background-color: rgba(0,0,0,.45);
+    color: var(--Headshot-Border-color);
+    text-decoration: none;
+    padding:.25em;
+    border-radius: 15px;    /*rounded corners*/
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.ProjectLink a:hover{
+    background-color: rgba(0,0,0);
+    transition: .5s;
+}
+/*linebreak styling*/
+.LineBreak{
+    width:99%;
+    border: .1px solid white;
+}
+/* Responsive Adjustments */
+
+@media (max-width: 399px) {
+    .ProjectImage {
+        visibility: hidden;
+    }
+}
+@media (min-width:1px){
+    .inside-Outline {
+        margin-top: 195px;
+        }
+}
+@media (min-width:233px){
+    .inside-Outline {
+        margin-top: 97px;
+        }
+}
+@media (min-width:325px){
+    .inside-Outline {
+        margin-top: 85px;
+        }
+}
+
+@media (min-width:395px){
+    .inside-Outline {
+        margin-top: 55px;
+        }
+}
+
+@media (min-width: 668px) {
+    .inside-Outline {
+    margin-top: 30px;
+    }
+}
+@media (min-width: 1200px) {
+    .inside-Outline {
+        font-size: 1.6em;
+    }
+}
+/*flex row to flex column*/
+@media (max-width:815px){
+    .Flex-Container{
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .Project-Description{
+        margin: 0px 15px;
+        margin-top: 15px;
+        background-color: var(--Abstract-color);
+        padding: 6px;
+        width: 66%;
+    }
+}
+
+.Goals{
+    background-color: var(--Abstract-color);
+    padding: 6px;
+    color: var(--Headshot-Border-color);
+    text-align: left;
+    
+    /* margin: auto; */
+    /* margin-right: 15px; */
+    margin: 0% 10%;
+    /*margin: 0px 10px 10px 10px;*//* top right bottom left*/
+    border-radius: 15px;    /*rounded corners*/
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.Goals ul{
+    padding: 0; /*remove any default padding*/
+    margin: .25rem 0rem;
+    line-height: 120%;
+}
+
+/*add a bottom margin to the last goal section*/
+#LastGoal{
+    margin-bottom: 1%;
+}
+
+/* Footer Section */
+.Footer {
+    background-color: var(--Page-Outline-color);
+    border-top: 1px solid var(--Black);
+    text-align: center;
+    min-height: 1em;
+    bottom: 0;
+    left: 0px;
+    width: 100%;
+    /* position: fixed; */
+    z-index: 100;
+    /* padding: -100px; */
+}
+.bullets{
+    margin: 10px 1px 10px auto;
+}
+
+/*Footer Links*/
+.bulletPoint { 
+    font-size: 14px;
+    display: inline; /*have bulletpoints on the same line*/
+    padding-right: 10px; /*have _px spacing on the right of each bullet point*/ 
+}
+
+/*Link attributes/styles*/
+.bulletPoint a{
+    background-color: rgba(54, 69, 79, 0.445);
+    padding: 3px;
+    border-radius: 5px;
+    color: var(--Black);
+}
+
+.bulletPoint a:link {
+    text-decoration: none; /*remove underline on links*/
+}
+    
+.bulletPoint a:hover {
+    background-color: rgb(54, 69, 79);
+    color: var(--Hover-color); /*change effects when user hovers over link*/
+    text-decoration: underline var(--Hover-color);
+    transition: .5s;
+}
